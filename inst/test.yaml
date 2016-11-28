@@ -12,7 +12,7 @@ categoryVars:
     - PCODE #  Postcode
 
 numVars:
-    AGE:  # Height
+    AGE: 
         aggr: 5
         noise: 2
     HCM:  # Height

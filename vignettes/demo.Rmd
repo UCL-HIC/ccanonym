@@ -5,13 +5,14 @@ date: "`r Sys.Date()`"
 output: 
   pdf_document:
     include: 
-      in_header: vignettes/report.latex
+      in_header: report.latex
 ---
 
 ```{r include=FALSE}
 library(ccdata)
 library(ccanonym)
 library(pander)
+library(yaml)
 
 panderOptions('table.split.table', 115)
 ```
@@ -55,12 +56,6 @@ NW1 1AA -> NW1. The function can be written in the configuration file.
 time stamps to the hour difference to the admission time. 
 
 
-```{r}
-library(ccdata)
-library(ccanonym)
-```
-
-
 ```{r, echo=FALSE}
 conf <- yaml.load_file("test_demo.yaml")
 vars <- parse.conf(conf)
@@ -86,7 +81,7 @@ Create a YAML configuration file as such, where the following variables are set
 up. The name of the items are the standard short name of _ccdata_ R package.
 Please see the 'ITEM\_REF.YAML'.
 
-* **Identifiable variables** (dirctVars), 
+* **Identifiable variables** (directVars), 
 * **Key categorical variables** (categoryVars), 
 * **Key numerical variables** (numVars), 
 * **Key date-time variables** (datetimeVars), 
