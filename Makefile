@@ -15,8 +15,8 @@ manual:
 	R CMD Rd2pdf . --force
 
 report:
-	@Rscript -e "library(knitr); knit('vignettes/demo.rmd')"
-	@Rscript -e "library(rmarkdown); render('demo.md')"
+	cd vignettes && Rscript -e "library(knitr); knit('demo.Rmd')"
+	cd vignettes && Rscript -e "library(rmarkdown); render('demo.md')"
 
 clean:
 	rm -rf src/*.o src/*.so

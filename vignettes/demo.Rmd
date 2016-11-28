@@ -5,7 +5,7 @@ date: "`r Sys.Date()`"
 output: 
   pdf_document:
     include: 
-      in_header: vignettes/report.latex
+      in_header: report.latex
 ---
 
 ```{r include=FALSE}
@@ -81,7 +81,7 @@ Create a YAML configuration file as such, where the following variables are set
 up. The name of the items are the standard short name of _ccdata_ R package.
 Please see the 'ITEM\_REF.YAML'.
 
-* **Identifiable variables** (dirctVars), 
+* **Identifiable variables** (directVars), 
 * **Key categorical variables** (categoryVars), 
 * **Key numerical variables** (numVars), 
 * **Key date-time variables** (datetimeVars), 
